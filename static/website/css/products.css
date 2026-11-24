@@ -1,0 +1,121 @@
+/* Product presentation follows the client's black-and-gold Digital Hub artwork. */
+.digital-hub {
+  padding: 32px;
+  overflow: hidden;
+  border: 2px solid #d7a644;
+  border-radius: 28px;
+  background: radial-gradient(ellipse at 20% 40%, #493019 0, transparent 55%), #100d09;
+  color: #fff6e5;
+  color-scheme: light;
+  box-shadow: 0 16px 40px rgba(34, 20, 5, .18);
+}
+.digital-hub::before { inset: 0; opacity: .3; border-radius: inherit; }
+.digital-hub::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 880px;
+  height: 420px;
+  right: -250px;
+  bottom: -365px;
+  border: 10px solid #d8a13e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffdf8b, 0 0 0 18px rgba(194, 139, 40, .4);
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+.hub-masthead { margin-bottom: 28px; text-align: center; }
+.hub-academy { margin: 0 0 10px; max-width: none; font-size: clamp(1rem, 2.2vw, 1.45rem); font-weight: 700; line-height: 1.2; color: #fff; }
+.hub-masthead h2 {
+  margin: 0;
+  font: 700 clamp(3.5rem, 8vw, 6.5rem)/.95 Georgia, "Times New Roman", serif;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+  color: #f4d37d;
+  background: linear-gradient(#fff8cd 8%, #e4b441 40%, #a86d13 65%, #ffdf78 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 6px 30px rgba(244, 185, 63, .12);
+}
+.hub-subtitle {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 6px 28px;
+  max-width: none;
+  background: linear-gradient(90deg, transparent, #d7a53c 12%, #ffebaa 50%, #d7a53c 88%, transparent);
+  color: #170e03;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+.hub-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(330px, 1fr); gap: 28px; align-items: center; }
+.hub-showcase { min-width: 0; text-align: center; }
+.cover-display { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 12px; padding: 24px 3px 40px; }
+.cover-display::after { content: ""; position: absolute; left: 0; right: 0; bottom: 12px; height: 2px; background: linear-gradient(90deg, transparent, #ac7721, #fff0b0, #ac7721, transparent); box-shadow: 0 6px 22px #c3953a; }
+.cover-display a { display: block; border: 1px solid #e4c475; background: #090806; box-shadow: -5px 4px 0 #4b3214, 8px 18px 24px rgba(0, 0, 0, .55); }
+.cover-display a:first-child { transform: perspective(700px) rotateY(9deg) rotate(-5deg); }
+.cover-display a:nth-child(2) { position: relative; z-index: 1; transform: translateY(-12px) scale(1.07); }
+.cover-display a:last-child { transform: perspective(700px) rotateY(-9deg) rotate(5deg); }
+.cover-display img { width: 100%; height: auto; }
+.showcase-caption { max-width: none; margin: 12px 0 24px; color: #fff6e5; font: 700 italic clamp(1.4rem, 2.8vw, 1.95rem)/1.1 Georgia, "Times New Roman", serif; }
+.showcase-caption strong { display: inline-block; padding: 6px 0; color: #f8d580; font-size: 1.17em; }
+.hub-benefits { display: flex; justify-content: center; padding: 18px 0; margin-bottom: 25px; border-top: 1px solid rgba(226, 180, 88, .45); border-bottom: 1px solid rgba(226, 180, 88, .45); font-size: .9rem; line-height: 1.3; color: #fff6e5; }
+.hub-benefits span { flex: 1; padding: 0 12px; }
+.hub-benefits span + span { border-left: 1px solid #bd8830; }
+.hub-access { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px 16px; border: 2px solid #ffe6a1; border-radius: 999px; background: linear-gradient(115deg, #b57a15 0%, #f5cb68 18%, #fff1b2 48%, #dca23a 76%, #f4ce6e 100%); color: #160e05; font-size: 1rem; font-weight: 700; line-height: 1.25; text-decoration: none; text-transform: uppercase; box-shadow: inset 0 1px 1px #fff6d3, 0 5px 18px rgba(230, 173, 55, .25); }
+.hub-access span { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border: 1px solid #ffdf84; border-radius: 50%; background: #0f0b05; color: #ffe7a5; font: 400 2.2rem/.7 Georgia, serif; }
+.hub-access:hover { filter: brightness(1.08); }
+.catalog-heading { margin: 0 0 18px; color: #fff7e9; text-align: center; font: 700 italic 2.2rem/1 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+.catalog-heading::after { content: ""; display: block; width: 85%; height: 2px; margin: 16px auto 0; background: linear-gradient(90deg, transparent, #ba862c, #fbe3a6, #ba862c, transparent); }
+.product-cards { display: grid; gap: 16px; }
+.product-card {
+  position: relative;
+  padding: 15px 16px 14px;
+  border: 2px solid transparent;
+  border-radius: 26px;
+  background: linear-gradient(115deg, #efdbb7 0%, #fff9ee 44%, #f8eedc 100%) padding-box, linear-gradient(145deg, #fff3ab 0%, #e6b747 30%, #ad741b 65%, #ffeab0 83%, #c59432 100%) border-box;
+  color: #17100b;
+  box-shadow: inset 0 0 0 1px #fff9e9, 0 3px 15px rgba(203, 147, 39, .2);
+}
+.product-card::before { content: ""; position: absolute; inset: 2px; border: 1px solid rgba(255, 255, 235, .8); border-radius: 23px; pointer-events: none; }
+.product-card-body { display: grid; grid-template-columns: 74px minmax(0, 1fr); align-items: start; gap: 11px; }
+.product-medallion { display: grid; place-items: center; width: 74px; aspect-ratio: 1; margin-top: 4px; border: 2px solid transparent; border-radius: 50%; background: radial-gradient(circle at 28% 22%, #a07836, #422c10 42%, #100b05 80%) padding-box, linear-gradient(135deg, #fff0ae, #dba133 45%, #fff3aa 85%, #b17813) border-box; color: #ffe095; box-shadow: 0 2px 8px rgba(156, 103, 12, .3); }
+.product-medallion svg { width: 49px; height: 49px; }
+.product-card-copy h3 { margin: 0 0 5px; color: #17100b; font: 700 1.48rem/1.03 Georgia, "Times New Roman", serif; letter-spacing: -.04em; }
+.product-card-copy p { margin: 0; color: #211811; font-size: .97rem; line-height: 1.22; }
+.product-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 9px; margin-top: 10px; }
+.product-price { color: #64151a; font: 700 2.65rem/1 Georgia, "Times New Roman", serif; letter-spacing: -.06em; white-space: nowrap; }
+.product-order { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 38px; padding: 7px 15px; border: 1px solid #f2dcad; border-radius: 999px; background: linear-gradient(#7f303b, #3b060d); color: #fffdf5; font: 600 1rem/1.1 "Instrument Sans", Arial, sans-serif; text-decoration: none; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16), 0 2px 4px rgba(63, 13, 18, .2); white-space: nowrap; }
+.product-order span { font: 400 1.8rem/.7 Georgia, serif; }
+.product-order:hover { background: linear-gradient(#93404b, #5a101b); }
+.product-order:focus-visible { outline-color: #64151a; outline-offset: 4px; }
+.hub-access:focus-visible, .cover-display a:focus-visible { outline-color: #fff0ad; outline-offset: 4px; }
+@media (max-width: 950px) {
+  .hub-layout { grid-template-columns: 1fr; gap: 32px; }
+  .hub-showcase { width: min(100%, 640px); margin: 0 auto; }
+  .hub-catalog { width: min(100%, 520px); margin: 0 auto; }
+  .product-card-copy h3 { font-size: 1.55rem; }
+  .product-card-copy p { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .digital-hub { padding: 18px; border-radius: 24px; }
+  .hub-masthead h2 { font-size: clamp(2.6rem, 11vw, 3.5rem); }
+  .hub-subtitle { padding: 6px 14px; font-size: .68rem; letter-spacing: .2em; }
+  .cover-display { gap: 8px; padding-top: 16px; }
+  .hub-benefits { font-size: .75rem; }
+  .hub-benefits span { padding: 0 7px; }
+  .hub-access { padding: 10px 12px; gap: 8px; font-size: .85rem; }
+  .catalog-heading { font-size: 2rem; }
+  .product-card { padding: 14px 12px 12px; }
+  .product-card-body { grid-template-columns: 62px minmax(0, 1fr); gap: 9px; }
+  .product-medallion { width: 62px; }
+  .product-medallion svg { width: 41px; height: 41px; }
+  .product-card-copy h3 { font-size: 1.28rem; }
+  .product-card-copy p { font-size: .9rem; line-height: 1.25; }
+  .product-price { font-size: 2.3rem; }
+  .product-order { padding: 7px 11px; gap: 8px; font-size: .86rem; min-height: 36px; }
+}
+@media (max-width: 360px) { .digital-hub { padding: 12px; } }
+@media (prefers-reduced-motion: reduce) { .cover-display a { transform: none !important; } }

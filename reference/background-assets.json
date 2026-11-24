@@ -1,0 +1,62 @@
+[
+  {
+    "file": "static/website/images/backgrounds/hero-bg.webp",
+    "source": "treava-hero.jpeg",
+    "crop": [
+      560,
+      0,
+      1280,
+      920
+    ],
+    "width": 2048,
+    "height": 1152,
+    "bytes": 165064
+  },
+  {
+    "file": "static/website/images/backgrounds/about-bg.webp",
+    "source": "treava-about.jpeg",
+    "crop": [
+      588,
+      40,
+      1024,
+      820
+    ],
+    "width": 2048,
+    "height": 1152,
+    "bytes": 125730
+  },
+  {
+    "file": "static/website/images/backgrounds/book-bg.webp",
+    "source": "treava-book.jpeg",
+    "crop": [
+      0,
+      0,
+      640,
+      710
+    ],
+    "width": 2048,
+    "height": 1152,
+    "bytes": 102080
+  },
+  {
+    "file": "static/website/images/backgrounds/guides-bg.webp",
+    "source": "linktree/18-creating-multiple-streams-behind-the-chair-listing.jpg",
+    "crops": [
+      [
+        0,
+        0,
+        420,
+        1380
+      ],
+      [
+        1590,
+        0,
+        2000,
+        1410
+      ]
+    ],
+    "width": 2048,
+    "height": 1152,
+    "bytes": 77850
+  }
+]

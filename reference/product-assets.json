@@ -1,0 +1,60 @@
+[
+  {
+    "file": "static/website/images/products/book-cover.webp",
+    "source": "linktree/13-purchase-my-new-book-today.png",
+    "source_width": 927,
+    "source_height": 1500,
+    "width": 560,
+    "height": 906,
+    "bytes": 89842,
+    "cropped": false
+  },
+  {
+    "file": "static/website/images/products/multiple-streams.webp",
+    "source": "linktree/18-creating-multiple-streams-behind-the-chair-listing.jpg",
+    "source_width": 2000,
+    "source_height": 2000,
+    "width": 560,
+    "height": 560,
+    "bytes": 68136,
+    "cropped": false
+  },
+  {
+    "file": "static/website/images/products/pillars-of-success.webp",
+    "source": "linktree/19-creating-pillars-of-success.jpg",
+    "source_width": 1000,
+    "source_height": 1000,
+    "width": 560,
+    "height": 560,
+    "bytes": 66822,
+    "cropped": false
+  },
+  {
+    "file": "static/website/images/products/evolving.webp",
+    "source": "linktree/21-evolving-for-the-salon-creative.jpg",
+    "source_width": 1000,
+    "source_height": 1000,
+    "width": 560,
+    "height": 560,
+    "bytes": 60634,
+    "cropped": false
+  },
+  {
+    "file": "static/website/images/products/hero-portrait.webp",
+    "source": "treava-hero.jpeg",
+    "crop": [
+      560,
+      0,
+      1280,
+      920
+    ],
+    "centering": [
+      0.5,
+      0.15
+    ],
+    "width": 660,
+    "height": 924,
+    "bytes": 130292,
+    "cropped": true
+  }
+]

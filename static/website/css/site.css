@@ -1,0 +1,80 @@
+﻿/* Keep the client's original palette, typography, and layout in reference.css. */
+img { display: block; max-width: 100%; height: auto; }
+.skip-link { position: absolute; top: -100px; left: 16px; z-index: 10000; padding: 12px 20px; color: var(--ink); background: var(--surface); border: 2px solid var(--brass); border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+.errorlist { margin: 0; padding-left: 20px; color: var(--accent); font-size: .9rem; }
+.free .errorlist { color: #f4c5df; }
+[aria-invalid="true"] { border-color: var(--accent); }
+.free .note { color: #e3b866; }
+.note:not(:empty) { padding: 10px 0; }
+textarea { resize: vertical; }
+
+/* Four background scenes sit behind the original content structure. */
+.hero, .about-section, .feature, .guides-background { position: relative; isolation: isolate; }
+.hero::before, .about-section::before, .feature::before, .guides-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--section-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  opacity: .12;
+}
+.hero::before { mask-image: linear-gradient(90deg, transparent, #000 80%); }
+.hero-copy { position: relative; }
+.mirror {
+  position: relative;
+  background-image: linear-gradient(0deg, rgba(36, 18, 43, .28), transparent 45%), var(--portrait-image);
+  background-size: cover;
+  background-position: center;
+}
+.hero-book {
+  position: absolute;
+  width: 136px;
+  bottom: -20px;
+  left: -22px;
+  transform: rotate(-7deg);
+  border: 1px solid var(--brass);
+  border-radius: 3px;
+  box-shadow: 8px 16px 24px rgba(0, 0, 0, .4);
+}
+.about-section::before { mask-image: linear-gradient(90deg, transparent 35%, #000 85%); }
+.feature { overflow: hidden; }
+.feature::before { mask-image: linear-gradient(90deg, transparent 30%, #000 100%); }
+.book-presentation {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+}
+.book-cover-link { justify-self: end; width: min(100%, 164px); }
+.book-cover {
+  width: 100%;
+  border: 1px solid var(--brass);
+  border-radius: 3px;
+  box-shadow: 8px 12px 22px rgba(36, 18, 43, .2);
+}
+.guides-background { margin-top: 56px; }
+.guides-background::before {
+  inset: -12px;
+  border-radius: 14px;
+  background-position: center;
+  opacity: .1;
+}
+
+@media (max-width: 800px) {
+  .hero-book { width: 116px; bottom: -16px; left: -14px; }
+  .about-section::before { opacity: .06; }
+  .book-presentation { width: min(100%, 400px); }
+}
+@media (max-width: 480px) {
+  .book-presentation { grid-template-columns: 1fr; gap: 20px; }
+  .book-cover-link { justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-book { transform: none; }
+}
